@@ -289,6 +289,29 @@ button { font-family: inherit; cursor: pointer; }
   margin-top: 2px;
 }
 
+/* ---- Dark hero treatment ---- */
+.hero {
+  background:
+    radial-gradient(120% 90% at 80% -10%, rgba(56,133,93,.20) 0%, transparent 55%),
+    linear-gradient(180deg, #16181b 0%, var(--ink) 75%);
+}
+.hero-glow { background: radial-gradient(circle, rgba(56,133,93,.22), transparent 65%); }
+.hero .eyebrow { color: var(--forest-bright); }
+.hero-title { color: #fff; }
+.hero-sub { color: var(--on-dark-mut); }
+.hero-trust {
+  background: rgba(255,255,255,0.04);
+  border-color: var(--line-dark);
+  box-shadow: none;
+}
+.hero-trust-head { color: #fff; }
+.hero-trust-list li { color: var(--on-dark); }
+.hero-trust-foot { color: var(--on-dark-mut); }
+.hero .check { background: rgba(56,133,93,.20); color: var(--forest-bright); }
+.hero .btn-ghost { color: #fff; border-color: rgba(255,255,255,0.22); background: transparent; }
+.hero .btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,0.07); }
+/* ---- End dark hero treatment ---- */
+
 /* ============================================================
    VALUES BAR
    ============================================================ */
