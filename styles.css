@@ -179,6 +179,13 @@ button { font-family: inherit; cursor: pointer; }
 }
 .nav .nav-cta:hover { background: var(--forest); color: #fff; }
 
+/* Header contact (top-right) */
+.header-contact { display: flex; flex-direction: column; align-items: flex-end; line-height: 1.35; }
+.header-phone { font-weight: 700; font-size: 1.02rem; color: var(--ink); letter-spacing: .01em; transition: color .2s var(--ease); }
+.header-phone:hover { color: var(--forest); }
+.header-email { font-size: .82rem; color: var(--text-muted); transition: color .2s var(--ease); }
+.header-email:hover { color: var(--forest); }
+
 .nav-toggle {
   display: none;
   width: 44px; height: 44px;
@@ -211,6 +218,8 @@ button { font-family: inherit; cursor: pointer; }
   text-align: center; border-radius: 999px; border: none; font-weight: 600;
 }
 .mobile-nav.open { display: flex; }
+.mobile-contact { display: flex; flex-direction: column; gap: 2px; margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); }
+.mobile-nav .mobile-contact a { border-bottom: none; padding: 10px 6px; font-size: .98rem; color: var(--forest); font-weight: 600; }
 
 /* ============================================================
    HERO
@@ -540,6 +549,10 @@ button { font-family: inherit; cursor: pointer; }
 .footer-brand .brand-mark { background: var(--ink-soft); color: var(--forest-bright); }
 .footer-name { color: #fff; font-weight: 700; font-size: 1.1rem; }
 .footer-desc { margin-top: 8px; font-size: .95rem; max-width: 34ch; }
+.footer-contact { margin-top: 16px; display: flex; flex-direction: column; gap: 6px; }
+.footer-contact a { color: var(--on-dark-mut); font-size: .95rem; transition: color .2s var(--ease); }
+.footer-contact a:first-child { color: #fff; font-weight: 700; font-size: 1.08rem; }
+.footer-contact a:hover { color: var(--forest-bright); }
 .footer-nav { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
 .footer-nav h4 { color: #fff; font-size: .82rem; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 16px; }
 .footer-nav a, .footer-nav p { display: block; font-size: .95rem; color: var(--on-dark-mut); margin-bottom: 10px; transition: color .2s var(--ease); }
@@ -562,6 +575,10 @@ button { font-family: inherit; cursor: pointer; }
 /* ============================================================
    RESPONSIVE
    ============================================================ */
+@media (max-width: 1040px) {
+  .header-email { display: none; }
+}
+
 @media (max-width: 980px) {
   .values-grid { grid-template-columns: repeat(2, 1fr); }
   .why-grid { grid-template-columns: repeat(2, 1fr); }
@@ -574,6 +591,7 @@ button { font-family: inherit; cursor: pointer; }
 @media (max-width: 760px) {
   body { font-size: 16px; }
   .nav { display: none; }
+  .header-contact { display: none; }
   .nav-toggle { display: flex; }
   .services-grid { grid-template-columns: 1fr; }
   .card, .card-feature, .card-dark { grid-column: 1 / -1; }
