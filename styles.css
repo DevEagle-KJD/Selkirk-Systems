@@ -336,6 +336,7 @@ button { font-family: inherit; cursor: pointer; }
 }
 .card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); border-color: #d5dad6; }
 .card-feature { grid-column: span 6; }
+.card-wide { grid-column: span 6; }
 .card-dark { grid-column: span 6; background: var(--ink); border-color: var(--ink-700); color: var(--on-dark); }
 .card-dark .card-title { color: #fff; }
 .card-dark .card-list li { color: var(--on-dark-mut); }
